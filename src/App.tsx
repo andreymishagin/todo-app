@@ -1,11 +1,8 @@
-import React from 'react';
+import React from "react";
+import styles from "./app.module.scss";
 
 function App() {
-  return (
-    <div>
-      My app
-    </div>
-  );
+  return <div className={styles.root}>My app</div>;
 }
 
 export default App;
