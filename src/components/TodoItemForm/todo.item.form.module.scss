@@ -1,0 +1,39 @@
+.formWrapper {
+  display: flex;
+  gap: 12px;
+}
+
+.input {
+  border: 2px solid #E2E5EB;
+  border-radius: 8px;
+  min-height: 48px;
+
+  display: inline-block;
+  width: 100%;
+  padding: 10px 16px;
+
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+
+  transition: all 0.3s cubic-bezier(0.64, 0.09, 0.08, 1);
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+
+  &::placeholder {
+    color: #9198A0;
+  }
+
+  &:hover {
+    border-color: #0097fd;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &:focus {
+    border-color: #0077db;
+  }
+}

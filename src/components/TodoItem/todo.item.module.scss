@@ -1,0 +1,33 @@
+.todoItem {
+  padding: 8px;
+
+  display: flex;
+  align-items: center;
+}
+
+.checkbox {
+  appearance: none;
+  border: 1px solid #a860ff;
+  border-radius: 4px;
+  outline: none;
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 5px;
+  &:after {
+    content: "✔";
+    display: none;
+    color: white;
+    font-size: 70%;
+  }
+  &:checked {
+    background-color: #6a50ee;
+    border: 2px solid #a860ff;
+    &:after {
+      display: block;
+    }
+  }
+}

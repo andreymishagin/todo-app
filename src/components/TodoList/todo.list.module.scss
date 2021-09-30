@@ -1,0 +1,19 @@
+.listWrapper {
+  max-width: 550px;
+  margin: 0 auto;
+  padding: 16px;
+
+  border-radius: 16px;
+  box-shadow: 0 2px 8px #E7EAFA;
+}
+
+.todoList {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.divider {
+  margin: 0 -16px;
+  border-bottom: 1px solid #e6e6e6;
+}
