@@ -13,7 +13,8 @@ export function TodoList() {
   const sortedTasks = React.useMemo(() => sortBy(tasks, "title").reverse(), [tasks]);
 
   const handleAddItem = (title: string) => {
-    const item = { id: useId<TodoTaskItem>(tasks), title };
+    const ids = tasks.map((i) => i.id);
+    const item = { id: useId(ids), title };
     const tasksCopy = [...tasks, item];
     setTasks(tasksCopy);
   };

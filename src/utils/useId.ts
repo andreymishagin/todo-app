@@ -1,10 +1,5 @@
-interface Item {
-  id: number;
-  [x: string]: any;
-}
-
-export function useId<T extends Item>(array: T[]): number {
+export function useId(array: number[]): number {
   if (array.length <= 0) return 1;
-  const biggestId = Math.max(...array.map((item: T) => item.id));
+  const biggestId = Math.max(...array);
   return biggestId + 1;
 }
