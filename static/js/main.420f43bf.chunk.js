@@ -1,2 +1,0 @@
-(this["webpackJsonptodo-app"]=this["webpackJsonptodo-app"]||[]).push([[0],{11:function(t,o,n){"use strict";n.r(o);var e=n(0),r=n.n(e),c=n(3),p=n.n(c),a=(n(9),n(4)),s=n.n(a),i=n(1);var d=function(){return Object(i.jsx)("div",{className:s.a.root,children:"My app"})};p.a.render(Object(i.jsx)(r.a.StrictMode,{children:Object(i.jsx)(d,{})}),document.getElementById("root"))},4:function(t,o,n){t.exports={root:"app_root__2_qmO"}},9:function(t,o,n){}},[[11,1,2]]]);
-//# sourceMappingURL=main.420f43bf.chunk.js.map
