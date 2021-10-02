@@ -14,7 +14,7 @@ export function TodoList() {
 
   const handleAddItem = (title: string) => {
     const ids = tasks.map((i) => i.id);
-    const item = { id: useId(ids), title };
+    const item = { id: useId(ids), title, isCompleted: false };
     const tasksCopy = [...tasks, item];
     setTasks(tasksCopy);
   };
@@ -24,8 +24,28 @@ export function TodoList() {
     setTasks(filteredTasks);
   };
 
+  const handleEditItem = (id: number, newTitle: string, isCompleted: boolean) => {
+    const item = tasks.find((item) => item.id === id);
+
+    if (!item) return;
+
+    if (item.title === newTitle && item.isCompleted === isCompleted) return;
+
+    const newItem = { ...item, title: newTitle, isCompleted };
+    const filteredTasks = tasks.filter((item) => item.id !== id);
+    const newTasks = [...filteredTasks, newItem];
+    setTasks(newTasks);
+  };
+
   const itemsList = sortedTasks.map((item) => (
-    <TodoItem key={item.id} id={item.id} title={item.title} handleRemoveItem={handleRemoveItem} />
+    <TodoItem
+      key={item.id}
+      id={item.id}
+      title={item.title}
+      isCompleted={item.isCompleted}
+      handleRemoveItem={handleRemoveItem}
+      handleEditItem={handleEditItem}
+    />
   ));
 
   return (

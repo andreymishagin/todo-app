@@ -3,4 +3,6 @@ export interface TodoTaskItem {
   id: number;
   /** Название задачи */
   title: string;
+  /** Флаг завершенности */
+  isCompleted: boolean;
 }

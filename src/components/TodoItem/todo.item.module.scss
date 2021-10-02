@@ -3,20 +3,51 @@
 
   display: flex;
   align-items: center;
+
+  gap: 8px;
+
+  height: 48px;
+}
+
+.title {
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.completed {
+  color: #d9d9d9;
+  text-decoration: line-through;
+}
+
+.iconButton {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.iconButton[disabled] {
+  opacity: 0.4;
+  cursor: auto;
 }
 
 .checkbox {
   appearance: none;
+
   border: 1px solid #a860ff;
   border-radius: 4px;
   outline: none;
+
   cursor: pointer;
+
   width: 20px;
   height: 20px;
+
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-right: 5px;
+  flex-shrink: 0;
   &:after {
     content: "✔";
     display: none;
