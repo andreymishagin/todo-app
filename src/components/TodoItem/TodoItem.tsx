@@ -20,6 +20,7 @@ export function TodoItem(props: TodoItemProps) {
   const [editedTitle, setEditedTitle] = React.useState<string>(title);
 
   const handleEdit = () => {
+    if (!editedTitle) return;
     if (isEdit) handleEditItem(id, editedTitle, isCompleted);
     setIsEdit(!isEdit);
   };
@@ -33,7 +34,7 @@ export function TodoItem(props: TodoItemProps) {
       <input checked={isCompleted} onChange={() => handleComplete()} type="checkbox" className={styles.checkbox} />
 
       {isEdit ? (
-        <Input value={editedTitle} onChange={setEditedTitle} />
+        <Input value={editedTitle} onChange={setEditedTitle} onEnterPress={handleEdit} />
       ) : (
         <div className={`${styles.title} ${isCompleted ? styles.completed : ""}`}>{title}</div>
       )}

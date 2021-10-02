@@ -19,7 +19,7 @@ export function TodoItemForm(props: TodoItemFormProps) {
 
   return (
     <div className={styles.formWrapper}>
-      <Input value={taskTitle} onChange={setTaskTitle} placeholder="What needs to be done?" />
+      <Input value={taskTitle} onChange={setTaskTitle} onEnterPress={handleButtonClick} placeholder="What needs to be done?" />
       <button onClick={handleButtonClick} className={styles.button}>
         Add task
       </button>
